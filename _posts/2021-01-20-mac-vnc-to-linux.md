@@ -3,6 +3,13 @@ layout: post
 title: 使用 Mac Screen shareing 共享遠端 Linux 螢幕 by VNC
 ---
 
+### 如何使用 ssh 遠端登入電腦
+
+## 兩端的電腦皆須先安裝 ssh (Linux 系統安裝 ssh)
+
+  >Ricky:$ [sudo apt-get install ssh]()
+  ```(即開始安裝 ssh)```
+
 ### VNC & Teamviewer
     
 
@@ -142,16 +149,10 @@ sudo nano /etc/samba/smb.conf
 ```
 
 重新啟動 Samba 服務：
-
+ sudo /etc/init.d/samba restart (ubuntu 17.4)
+ sudo /etc/init.d/smbd restart (ubuntu 20.04)
 ```
-sudo /etc/init.d/samba restart
-```
-
-### 設置用來註冊遠端登入 Samba 的帳密
-
-ricky@ricky-desktop:~/Desktop/Shared$ [sudo smbpasswd -a ricky]()
-
-```
+sudo /etc/in
 New SMB password:
 Retype new SMB password:
 Added user ricky.
